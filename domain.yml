@@ -1,0 +1,306 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- food_order:
+    use_entities: true
+- Salad:
+    use_entities: true
+- Main_course:
+    use_entities: true
+- veg_order:
+    use_entities: true
+- non_veg_order:
+    use_entities: true
+- Paneer:
+    use_entities: true
+- mix_veg:
+    use_entities: true
+- dal:
+    use_entities: true
+- chicken:
+    use_entities: true
+- mutton:
+    use_entities: true
+- prawns:
+    use_entities: true
+- anythingelse:
+    use_entities: true
+- yes_to_order:
+    use_entities: true
+- no_to_order:
+    use_entities: true
+- Paneer_salad:
+    use_entities: true
+- Chicken_salad:
+    use_entities: true
+- BBQ_salad:
+    use_entities: true
+- Crispy_salad:
+    use_entities: true
+- Matar_mushroom:
+    use_entities: true
+- Paneer_butter_masala:
+    use_entities: true
+- Dal_tadka:
+    use_entities: true
+- Mutton_maharaja:
+    use_entities: true
+- Butter_chicken:
+    use_entities: true
+- Dal:
+    use_entities: true
+- Mutton_masala:
+    use_entities: true
+- Veg_kadai:
+    use_entities: true
+- Prawns_khao_suey:
+    use_entities: true
+- Mix_veg:
+    use_entities: true
+- Chicken_tandoori:
+    use_entities: true
+- Dal_khichadi:
+    use_entities: true
+- Chicken_dum_biryani:
+    use_entities: true
+- Paneer_tikka:
+    use_entities: true
+- Vegetable_kurma:
+    use_entities: true
+- Prawns_red_curry:
+    use_entities: true
+- Prawns_butter_garlic:
+    use_entities: true
+- Dal_fry:
+    use_entities: true
+- Mutton_dum_biryani:
+    use_entities: true
+- Veg_order:
+    use_entities: true
+- Palak_paneer:
+    use_entities: true
+- Mint_mocktail:
+    use_entities: true
+- Tandoori_roti:
+    use_entities: true
+- Rabdi_jalebi:
+    use_entities: true
+- Gulabjamun:
+    use_entities: true
+- Breads:
+    use_entities: true
+- Rabdi:
+    use_entities: true
+- Orange_juice:
+    use_entities: true
+- Paneer_naan_roti:
+    use_entities: true
+- Naan_roti:
+    use_entities: true
+- Desserts:
+    use_entities: true
+- Blue_lagoon:
+    use_entities: true
+- Ice_tea:
+    use_entities: true
+- Ras_malai:
+    use_entities: true
+- Beverage:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: |-
+      Hey! i am Food Ordering Bot 
+       How are you?
+  utter_cheer_up:
+  - image: https://i.pinimg.com/originals/14/06/1b/14061be84f18bda54e29b6f036157c4b.jpg
+    text: 'here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_food_order:
+  - buttons:
+    - payload: /Salad
+      title: Salad
+    - payload: /Main_course
+      title: Main Course
+    - payload: /Breads
+      title: Breads
+    - payload: /Desserts
+      title: Desserts
+    - payload: /Beverage
+      title: Beverage
+    text: 'What would you like to order? '
+  utter_Salad:
+  - buttons:
+    - payload: /Paneer_salad
+      title: Paneer Salad --> Rs.99
+    - payload: /Crispy_salad
+      title: Crispy Salad --> Rs.99
+    - payload: /BBQ_salad
+      title: BBQ Salad --> Rs.149
+    - payload: /Chicken_salad
+      title: Chicken Salad --> Rs.199
+    text: What would you like to order in Salad ?!!
+  utter_Main_course:
+  - buttons:
+    - payload: /Veg_order
+      title: Veg
+    - payload: /Non_veg_order
+      title: Non-Veg
+    text: 'What would you prefer:'
+  utter_veg_order:
+  - buttons:
+    - payload: /Paneer
+      title: Paneer
+    - payload: /Mix_veg
+      title: Mix-Veg
+    - payload: /Dal
+      title: Dal
+    image: https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Neha_Mathur/Achari_Paneer_Tikka_Recipe_Party_Food.JPG
+    text: Eat GOOD, Feel Good!!!
+  utter_Paneer:
+  - buttons:
+    - payload: /Paneer_tikka
+      title: Paneer Tikka --> Rs.189
+    - payload: /Paneer_butter_masala
+      title: Paneer Butter Masala --> Rs.249
+    - payload: /Palak_paneer
+      title: Palak Paneer --> Rs.199
+    text: what you want to order?
+  utter_mix_veg:
+  - buttons:
+    - payload: /Veg_kadai
+      title: Veg Kadai --> Rs.189
+    - payload: /Matar_mushroom
+      title: Matar Mushroom --> Rs.249
+    - payload: /Vegetable_kurma
+      title: Vegetable Kurma --> Rs.199
+    text: what you want to order?
+  utter_dal:
+  - buttons:
+    - payload: /Dal_tadka
+      title: Dal Tadka --> Rs.189
+    - payload: /Dal_fry
+      title: Dal Fry --> Rs.249
+    - payload: /Dal_khichadi
+      title: Dal Khichadi --> Rs.199
+    text: what you want to order?
+  utter_non_veg_order:
+  - buttons:
+    - payload: /chicken
+      title: Chicken
+    - payload: /mutton
+      title: Mutton
+    - payload: /prawns
+      title: Prawns
+    image: https://images.themodernproper.com/billowy-turkey/production/posts/2020/Creamy-Tomato-Chicken-Skillet-11.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1599768537&s=dad6c7ab7cb4f30fd51949ab8859b070
+    text: People who love to eat are always the BEST People!!
+  utter_chicken:
+  - buttons:
+    - payload: /Chicken_tandoori
+      title: Chicken Tandoori --> Rs.199
+    - payload: /Chicken_dum_biryani
+      title: Chicken Dum Biryani --> Rs.199
+    - payload: /Butter_chicken
+      title: Butter Chicken --> Rs.249
+    text: what you want to order?
+  utter_mutton:
+  - buttons:
+    - payload: /Mutton_masala
+      title: Mutton Masala  --> Rs.199
+    - payload: /Mutton_dum_biryani
+      title: Mutton Dum Biryani --> Rs.199
+    - payload: /Mutton_maharaja
+      title: Mutton Maharaja  --> Rs.249
+    text: what you want to order?
+  utter_prawns:
+  - buttons:
+    - payload: /Prawns_butter_garlic
+      title: Prawns Butter Garlic  --> Rs.199
+    - payload: /Prawns_red_curry
+      title: Prawns Red Curry --> Rs.199
+    - payload: /Prawns_khao_suey
+      title: Prawns Khao Suey  --> Rs.249
+    text: what you want to order?
+  utter_Breads:
+  - buttons:
+    - payload: /Naan_roti
+      title: Naan Roti --> Rs.59
+    - payload: /Paneer_naan_roti
+      title: Panner Naan Roti --> Rs.59
+    - payload: /Tandoori_roti
+      title: Tandoori Roti --> Rs.29
+    text: What would you like to order in Breads ?!!
+  utter_Desserts:
+  - buttons:
+    - payload: /Gulabjamun
+      title: Gulabjamun --> Rs.59
+    - payload: /Ras_malai
+      title: Rasmalai --> Rs.99
+    - payload: /Rabdi
+      title: Rabdi --> Rs.99
+    - payload: /Rabdi_jalebi
+      title: Rabdi Jalebi --> Rs.119
+    text: What would you like to order in Desserts ?!!
+  utter_Beverage:
+  - buttons:
+    - payload: /Mint_mocktail
+      title: Mint Mocktail --> Rs.99
+    - payload: /Blue_lagoon
+      title: Blue Lagoon --> Rs.99
+    - payload: /Ice_tea
+      title: Ice Tea --> Rs.49
+    - payload: /Orange_juice
+      title: Orange Juice --> Rs.99
+    text: What would you like to order in Beverage ?!!
+  utter_anythingelse:
+  - buttons:
+    - payload: /yes_to_order
+      title: YES
+    - payload: /no_to_order
+      title: NO
+    text: Thanks, Is their anything else to order ?
+  utter_yes_to_order:
+  - buttons:
+    - payload: /Salad
+      title: Salad
+    - payload: /Main_course
+      title: Main Course
+    - payload: /Breads
+      title: Breads
+    - payload: /Desserts
+      title: Desserts
+    - payload: /Beverage
+      title: Beverage
+    text: What would you like to order?
+  utter_no_to_order:
+  - text: Thanks, we are preparing your order shortly.
+actions: []
+forms: {}
+e2e_actions: []

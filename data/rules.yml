@@ -1,0 +1,233 @@
+version: "2.0"
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+- rule: food orderign rule
+  steps:
+  - intent: food_order
+  - action: utter_food_order
+- rule: Salad ordering rule
+  steps:
+  - intent: Salad
+  - action: utter_Salad  
+- rule: Salad ordering rule 1
+  steps:
+  - intent: Paneer_salad
+  - action: utter_anythingelse 
+- rule: Salad ordering rule 2
+  steps:
+  - intent: Crispy_salad
+  - action: utter_anythingelse    
+- rule: Salad ordering rule 3
+  steps:
+  - intent: BBQ_salad
+  - action: utter_anythingelse   
+- rule: Salad ordering rule 4
+  steps:
+  - intent: Chicken_salad
+  - action: utter_anythingelse
+
+
+
+- rule: Main Course ordering rule
+  steps:
+  - intent: Main_course
+  - action: utter_Main_course 
+- rule: veg order rule
+  steps:
+  - intent: Veg_order
+  - action: utter_veg_order
+- rule: Paneer order rule
+  steps:
+  - intent: Paneer
+  - action: utter_Paneer
+- rule: Paneer order rule 1
+  steps:
+  - intent: Paneer_tikka
+  - action: utter_anythingelse
+- rule: Paneer order rule 2
+  steps:
+  - intent: Paneer_butter_masala
+  - action: utter_anythingelse
+- rule: Paneer order rule 3
+  steps:
+  - intent: Palak_paneer
+  - action: utter_anythingelse
+
+
+- rule: mix veg order rule
+  steps:
+  - intent: Mix_veg
+  - action: utter_mix_veg
+- rule: mix veg order rule 1
+  steps:
+  - intent: Veg_kadai
+  - action: utter_anythingelse
+- rule: mix veg order rule 2
+  steps:
+  - intent: Matar_mushroom
+  - action: utter_anythingelse
+- rule: mix veg order rule 3
+  steps:
+  - intent: Vegetable_kurma
+  - action: utter_anythingelse
+
+- rule: dal order rule
+  steps:
+  - intent: Dal
+  - action: utter_dal
+- rule: dal order rule 1
+  steps:
+  - intent: Dal_tadka
+  - action: utter_anythingelse
+- rule: dal order rule 2
+  steps:
+  - intent: Dal_fry
+  - action: utter_anythingelse
+- rule: dal order rule 3
+  steps:
+  - intent: Dal_khichadi
+  - action: utter_anythingelse
+
+
+- rule: nonveg order rule
+  steps:
+  - intent: non_veg_order
+  - action: utter_non_veg_order
+- rule: chicken order rule
+  steps:
+  - intent: chicken
+  - action: utter_chicken
+- rule: chicken order rule 1
+  steps:
+  - intent: Chicken_tandoori
+  - action: utter_anythingelse
+- rule: chicken order rule 2
+  steps:
+  - intent: Chicken_dum_biryani
+  - action: utter_anythingelse
+- rule: chicken order rule 3
+  steps:
+  - intent: Butter_chicken
+  - action: utter_anythingelse
+
+
+- rule: mutton order rule
+  steps:
+  - intent: mutton
+  - action: utter_mutton
+- rule: mutton order rule 1
+  steps:
+  - intent: Mutton_masala
+  - action: utter_anythingelse
+- rule: mutton order rule 2
+  steps:
+  - intent: Mutton_dum_biryani
+  - action: utter_anythingelse
+- rule: mutton order rule 3
+  steps:
+  - intent: Mutton_maharaja
+  - action: utter_anythingelse
+
+
+- rule: prawns order rule
+  steps:
+  - intent: prawns
+  - action: utter_prawns
+- rule: prawns order rule 1
+  steps:
+  - intent: Prawns_butter_garlic
+  - action: utter_anythingelse
+- rule: prawns order rule 2
+  steps:
+  - intent: Prawns_red_curry
+  - action: utter_anythingelse
+- rule: prawns order rule 3
+  steps:
+  - intent: Prawns_khao_suey
+  - action: utter_anythingelse
+
+- rule: Breads order rule 
+  steps:
+  - intent: Breads
+  - action: utter_Breads
+- rule: Breads order rule 1 
+  steps:
+  - intent: Naan_roti
+  - action: utter_anythingelse
+- rule: Breads order rule 2
+  steps:
+  - intent: Paneer_naan_roti
+  - action: utter_anythingelse
+- rule: Breads order rule 3
+  steps:
+  - intent: Tandoori_roti
+  - action: utter_anythingelse
+
+- rule: Desserts order rule 
+  steps:
+  - intent: Desserts
+  - action: utter_Desserts
+- rule: Desserts order rule 1
+  steps:
+  - intent: Gulabjamun
+  - action: utter_anythingelse
+- rule: Desserts order rule 2
+  steps:
+  - intent: Ras_malai
+  - action: utter_anythingelse
+- rule: Desserts order rule 3
+  steps:
+  - intent: Rabdi
+  - action: utter_anythingelse
+- rule: Desserts order rule 4
+  steps:
+  - intent: Rabdi_jalebi
+  - action: utter_anythingelse
+
+- rule: Beverage order rule 
+  steps:
+  - intent: Beverage
+  - action: utter_Beverage
+- rule: Beverage order rule 1
+  steps:
+  - intent: Mint_mocktail
+  - action: utter_anythingelse
+- rule: Beverage order rule 2
+  steps:
+  - intent: Blue_lagoon
+  - action: utter_anythingelse
+- rule: Beverage order rule 3 
+  steps:
+  - intent: Ice_tea
+  - action: utter_anythingelse
+- rule: Beverage order rule 4
+  steps:
+  - intent: Orange_juice
+  - action: utter_anythingelse
+
+
+
+
+
+- rule: anythingelse
+  steps:
+  - intent: anythingelse
+  - action: utter_anythingelse
+
+- rule: yes to order rule
+  steps:
+  - intent: yes_to_order
+  - action: utter_yes_to_order
+
+- rule: no to  order rule
+  steps:
+  - intent: no_to_order
+  - action: utter_no_to_order    
+    
